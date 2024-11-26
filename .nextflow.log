@@ -1,0 +1,757 @@
+Nov-26 14:45:24.851 [main] DEBUG nextflow.cli.Launcher - $> nextflow run /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/main.nf --input /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/SampleSheet.csv --outdir /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq --fasta /home/hieunguyen/CRC1382/outdir/ref/Mus_musculus.GRCm39.dna.primary_assembly.fa --gtf /home/hieunguyen/CRC1382/outdir/ref/Mus_musculus.GRCm39.113.gtf -profile docker -resume --max_cpus 20 --max_memory 75GB --publish_dir_mode copy -w /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work
+Nov-26 14:45:24.966 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 24.10.1
+Nov-26 14:45:24.987 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/hieunguyen/.nextflow/plugins; core-plugins: nf-amazon@2.9.1,nf-azure@1.10.2,nf-cloudcache@0.4.2,nf-codecommit@0.2.2,nf-console@1.1.4,nf-google@1.15.2,nf-tower@1.9.3,nf-wave@1.7.3
+Nov-26 14:45:25.004 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Nov-26 14:45:25.006 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Nov-26 14:45:25.009 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Nov-26 14:45:25.021 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Nov-26 14:45:25.045 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/nextflow.config
+Nov-26 14:45:25.048 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/nextflow.config
+Nov-26 14:45:25.076 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/hieunguyen/.nextflow/secrets/store.json
+Nov-26 14:45:25.080 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@7fcff1b9] - activable => nextflow.secret.LocalSecretsProvider@7fcff1b9
+Nov-26 14:45:25.094 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
+Nov-26 14:45:28.285 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [bih, cfc_dev, uzl_omics, ifb_core, embl_hd, denbi_qbic, alice, mjolnir_globe, uppmax, giga, incliva, ilifu, uge, rosalind_uge, lugh, mccleary, unibe_ibu, vai, czbiohub_aws, jax, roslin, ccga_med, tes, scw, unc_longleaf, tigem, tubingen_apg, google, apollo, ipop_up, vsc_calcua, pdc_kth, googlels, ceci_nic5, stjude, daisybio, eddie, medair, biowulf, apptainer, bi, bigpurple, test_full_gcp, adcra, cedars, pawsey_setonix, vsc_kul_uhasselt, pawsey_nimbus, ucl_myriad, utd_ganymede, charliecloud, icr_davros, ceres, arm, munin, rosalind, hasta, cfc, test_full_aws, uzh, shu_bmrc, ebi_codon_slurm, ebc, ccga_dx, crick, ku_sund_danhead, marvin, shifter, biohpc_gen, mana, mamba, york_viking, unc_lccc, wehi, awsbatch, wustl_htcf, arcc, ceci_dragon2, imperial, maestro, software_license, genotoul, nci_gadi, abims, janelia, nu_genomics, googlebatch, oist, sahmri, mpcdf, leicester, vsc_ugent, create, sage, cambridge, jex, podman, ebi_codon, cheaha, xanadu, nyu_hpc, test, marjorie, computerome, ucd_sonic, seg_globe, sanger, dkfz, bluebear, pasteur, einstein, ethz_euler, m3c, test_full, imb, ucl_cscluster, tuos_stanage, azurebatch, hki, crukmi, csiro_petrichor, qmul_apocrita, wave, docker, test_full_azure, engaging, gis, hypatia, psmn, eva, nygc, fgcz, conda, crg, singularity, mpcdf_viper, pe2, self_hosted_runner, tufts, uw_hyak_pedslabs, utd_sysbio, debug, genouest, cbe, unsw_katana, gitpod, phoenix, seawulf, uod_hpc, fub_curta, uct_hpc, aws_tower, binac]
+Nov-26 14:45:28.333 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Nov-26 14:45:28.348 [main] DEBUG nextflow.cli.CmdRun - Launching `/home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/main.nf` [sick_neumann] DSL2 - revision: 85c9b75b8b
+Nov-26 14:45:28.349 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins declared=[nf-schema@2.1.1]
+Nov-26 14:45:28.350 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Nov-26 14:45:28.350 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[nf-schema@2.1.1]
+Nov-26 14:45:28.350 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-schema version: 2.1.1
+Nov-26 14:45:28.355 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-schema@2.1.1' resolved
+Nov-26 14:45:28.355 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-schema@2.1.1'
+Nov-26 14:45:28.361 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-schema@2.1.1
+Nov-26 14:45:28.415 [main] DEBUG nextflow.Session - Session UUID: db3dbcdf-ed8f-40ed-9e22-5990a2db8d88
+Nov-26 14:45:28.415 [main] DEBUG nextflow.Session - Run name: sick_neumann
+Nov-26 14:45:28.415 [main] DEBUG nextflow.Session - Executor pool size: 28
+Nov-26 14:45:28.425 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Nov-26 14:45:28.431 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=84; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Nov-26 14:45:28.465 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 24.10.1 build 5930
+  Created: 18-11-2024 12:21 UTC (13:21 CEST)
+  System: Linux 5.15.0-126-generic
+  Runtime: Groovy 4.0.23 on OpenJDK 64-Bit Server VM 11.0.25+9-post-Ubuntu-1ubuntu120.04
+  Encoding: UTF-8 (UTF-8)
+  Process: 177050@hieunguyen [127.0.1.1]
+  CPUs: 28 - Mem: 125.5 GB (5.2 GB) - Swap: 2 GB (1.4 GB)
+Nov-26 14:45:28.497 [main] DEBUG nextflow.Session - Work-dir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work [ext2/ext3]
+Nov-26 14:45:28.528 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Nov-26 14:45:28.539 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Nov-26 14:45:28.584 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Nov-26 14:45:28.595 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 29; maxThreads: 1000
+Nov-26 14:45:28.655 [main] DEBUG nextflow.Session - Session start
+Nov-26 14:45:28.658 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/pipeline_info/execution_trace_2024-11-26_14-45-27.txt
+Nov-26 14:45:28.905 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Nov-26 14:45:31.361 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryLog:paramsSummaryLog]; plugin Id: nf-schema
+Nov-26 14:45:31.417 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [validateParameters:validateParameters]; plugin Id: nf-schema
+Nov-26 14:45:31.420 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-schema
+Nov-26 14:45:34.877 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-schema
+Nov-26 14:45:34.877 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [samplesheetToList:samplesheetToList]; plugin Id: nf-schema
+Nov-26 14:45:38.621 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryLog:paramsSummaryLog]; plugin Id: nf-schema
+Nov-26 14:45:38.621 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [validateParameters:validateParameters]; plugin Id: nf-schema
+Nov-26 14:45:38.623 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-schema
+Nov-26 14:45:39.828 [main] INFO  nextflow.Nextflow - 
+-[2m----------------------------------------------------[0m-
+                                        [0;32m,--.[0;30m/[0;32m,-.[0m
+[0;34m        ___     __   __   __   ___     [0;32m/,-._.--~'[0m
+[0;34m  |\ | |__  __ /  ` /  \ |__) |__         [0;33m}  {[0m
+[0;34m  | \| |       \__, \__/ |  \ |___     [0;32m\`-._,-`-,[0m
+                                        [0;32m`._,._,'[0m
+[0;35m  nf-core/rnaseq 3.17.0[0m
+-[2m----------------------------------------------------[0m-
+[1mInput/output options[0m
+  [0;34minput           : [0;32m/home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/SampleSheet.csv[0m
+  [0;34moutdir          : [0;32m/home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq[0m
+
+[1mReference genome options[0m
+  [0;34mfasta           : [0;32m/home/hieunguyen/CRC1382/outdir/ref/Mus_musculus.GRCm39.dna.primary_assembly.fa[0m
+  [0;34mgtf             : [0;32m/home/hieunguyen/CRC1382/outdir/ref/Mus_musculus.GRCm39.113.gtf[0m
+
+[1mAlignment options[0m
+  [0;34mmin_mapped_reads: [0;32m5[0m
+
+[1mCore Nextflow options[0m
+  [0;34mrunName         : [0;32msick_neumann[0m
+  [0;34mcontainerEngine : [0;32mdocker[0m
+  [0;34mlaunchDir       : [0;32m/home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq[0m
+  [0;34mworkDir         : [0;32m/home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work[0m
+  [0;34mprojectDir      : [0;32m/home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq[0m
+  [0;34muserName        : [0;32mhieunguyen[0m
+  [0;34mprofile         : [0;32mdocker[0m
+  [0;34mconfigFiles     : [0;32m[0m
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+-[2m----------------------------------------------------[0m-
+* The pipeline
+    https://doi.org/10.5281/zenodo.1400710
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/rnaseq/blob/master/CITATIONS.md
+
+Nov-26 14:45:39.831 [main] DEBUG nextflow.validation.SchemaValidator - Starting parameters validation
+Nov-26 14:45:39.871 [main] WARN  nextflow.validation.SchemaValidator - The following invalid input values have been detected:
+
+* --max_cpus: 20
+* --max_memory: 75GB
+
+
+Nov-26 14:45:39.974 [main] DEBUG nextflow.validation.SchemaEvaluator - Started validating /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/SampleSheet.csv
+Nov-26 14:45:40.041 [main] DEBUG nextflow.validation.SchemaEvaluator - Validation of file '/home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/SampleSheet.csv' passed!
+Nov-26 14:45:40.042 [main] DEBUG n.v.FormatDirectoryPathEvaluator - Cloud blob storage paths are not supported by 'FormatDirectoryPathEvaluator': 's3://ngi-igenomes/igenomes/'
+Nov-26 14:45:40.043 [main] DEBUG nextflow.validation.SchemaValidator - Finishing parameters validation
+Nov-26 14:45:40.113 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:GTF_FILTER` matches process NFCORE_RNASEQ:PREPARE_GENOME:GTF_FILTER
+Nov-26 14:45:40.126 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:40.126 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:40.133 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Nov-26 14:45:40.140 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=28; memory=125.5 GB; capacity=28; pollInterval=100ms; dumpInterval=5m
+Nov-26 14:45:40.143 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Nov-26 14:45:40.232 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_RNASEQ:PREPARE_GENOME:GTF2BED
+Nov-26 14:45:40.234 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:GTF2BED` matches process NFCORE_RNASEQ:PREPARE_GENOME:GTF2BED
+Nov-26 14:45:40.238 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:40.239 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:40.253 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name NFCORE_RNASEQ:PREPARE_GENOME:MAKE_TRANSCRIPTS_FASTA
+Nov-26 14:45:40.256 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:GUNZIP_.*|MAKE_TRANSCRIPTS_FASTA` matches process NFCORE_RNASEQ:PREPARE_GENOME:MAKE_TRANSCRIPTS_FASTA
+Nov-26 14:45:40.260 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:40.261 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:40.300 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_RNASEQ:PREPARE_GENOME:CUSTOM_GETCHROMSIZES
+Nov-26 14:45:40.301 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CUSTOM_GETCHROMSIZES` matches process NFCORE_RNASEQ:PREPARE_GENOME:CUSTOM_GETCHROMSIZES
+Nov-26 14:45:40.321 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:40.321 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:40.366 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name NFCORE_RNASEQ:PREPARE_GENOME:STAR_GENOMEGENERATE
+Nov-26 14:45:40.367 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:UNTAR_.*|STAR_GENOMEGENERATE|STAR_GENOMEGENERATE_IGENOMES|HISAT2_BUILD` matches process NFCORE_RNASEQ:PREPARE_GENOME:STAR_GENOMEGENERATE
+Nov-26 14:45:40.372 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:40.373 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:40.515 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:CAT_FASTQ
+Nov-26 14:45:40.516 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CAT_FASTQ` matches process NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:CAT_FASTQ
+Nov-26 14:45:40.520 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:40.520 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:40.547 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC
+Nov-26 14:45:40.548 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC` matches process NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC
+Nov-26 14:45:40.550 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:40.551 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:40.568 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE
+Nov-26 14:45:40.570 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE` matches process NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE
+Nov-26 14:45:40.575 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:40.575 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:40.663 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:SALMON_INDEX
+Nov-26 14:45:40.664 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SALMON_INDEX` matches process NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:SALMON_INDEX
+Nov-26 14:45:40.667 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:40.667 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:40.680 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE
+Nov-26 14:45:40.681 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE` matches process NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE
+Nov-26 14:45:40.684 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:40.684 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:40.698 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:SALMON_QUANT
+Nov-26 14:45:40.700 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:FASTQ_SUBSAMPLE_FQ_SALMON:SALMON_QUANT` matches process NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:SALMON_QUANT
+Nov-26 14:45:40.703 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:40.703 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:40.759 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:STAR_ALIGN
+Nov-26 14:45:40.760 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:ALIGN_STAR:STAR_ALIGN` matches process NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:STAR_ALIGN
+Nov-26 14:45:40.760 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:ALIGN_STAR:STAR_ALIGN|.*:ALIGN_STAR:STAR_ALIGN_IGENOMES` matches process NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:STAR_ALIGN
+Nov-26 14:45:40.765 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:40.765 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:40.784 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_STATS_SAMTOOLS:SAMTOOLS_SORT
+Nov-26 14:45:40.785 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:NFCORE_RNASEQ:RNASEQ:.*:BAM_SORT_STATS_SAMTOOLS:SAMTOOLS_SORT` matches process NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_STATS_SAMTOOLS:SAMTOOLS_SORT
+Nov-26 14:45:40.787 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:40.787 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:40.800 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_STATS_SAMTOOLS:SAMTOOLS_INDEX
+Nov-26 14:45:40.801 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:NFCORE_RNASEQ:RNASEQ:.*:BAM_SORT_STATS_SAMTOOLS:SAMTOOLS_INDEX` matches process NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_STATS_SAMTOOLS:SAMTOOLS_INDEX
+Nov-26 14:45:40.804 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:40.804 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:40.822 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS
+Nov-26 14:45:40.823 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:NFCORE_RNASEQ:RNASEQ:.*:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:.*` matches process NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS
+Nov-26 14:45:40.825 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:40.825 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:40.833 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT
+Nov-26 14:45:40.835 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:NFCORE_RNASEQ:RNASEQ:.*:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:.*` matches process NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT
+Nov-26 14:45:40.837 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:40.837 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:40.845 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS
+Nov-26 14:45:40.847 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:NFCORE_RNASEQ:RNASEQ:.*:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:.*` matches process NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS
+Nov-26 14:45:40.849 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:40.849 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:40.878 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SALMON_QUANT
+Nov-26 14:45:40.879 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:QUANTIFY_STAR_SALMON:SALMON_QUANT` matches process NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SALMON_QUANT
+Nov-26 14:45:40.882 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:40.882 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:40.897 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:CUSTOM_TX2GENE
+Nov-26 14:45:40.898 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:QUANTIFY_STAR_SALMON:CUSTOM_TX2GENE` matches process NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:CUSTOM_TX2GENE
+Nov-26 14:45:40.900 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:40.900 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:40.915 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:TXIMETA_TXIMPORT
+Nov-26 14:45:40.916 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:QUANTIFY_STAR_SALMON:TXIMETA_TXIMPORT` matches process NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:TXIMETA_TXIMPORT
+Nov-26 14:45:40.919 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:40.919 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:40.940 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SE_GENE
+Nov-26 14:45:40.942 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:QUANTIFY_STAR_SALMON:SE_.*` matches process NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SE_GENE
+Nov-26 14:45:40.942 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:QUANTIFY_STAR_SALMON:SE_GENE` matches process NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SE_GENE
+Nov-26 14:45:40.944 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:40.944 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:40.956 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SE_GENE_LENGTH_SCALED
+Nov-26 14:45:40.958 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:QUANTIFY_STAR_SALMON:SE_.*` matches process NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SE_GENE_LENGTH_SCALED
+Nov-26 14:45:40.958 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:QUANTIFY_STAR_SALMON:SE_GENE_LENGTH_SCALED` matches process NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SE_GENE_LENGTH_SCALED
+Nov-26 14:45:40.960 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:40.960 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:40.971 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SE_GENE_SCALED
+Nov-26 14:45:40.972 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:QUANTIFY_STAR_SALMON:SE_.*` matches process NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SE_GENE_SCALED
+Nov-26 14:45:40.973 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:QUANTIFY_STAR_SALMON:SE_GENE_SCALED` matches process NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SE_GENE_SCALED
+Nov-26 14:45:40.975 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:40.975 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:40.984 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SE_TRANSCRIPT
+Nov-26 14:45:40.985 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:QUANTIFY_STAR_SALMON:SE_.*` matches process NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SE_TRANSCRIPT
+Nov-26 14:45:40.986 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:QUANTIFY_STAR_SALMON:SE_TRANSCRIPT` matches process NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SE_TRANSCRIPT
+Nov-26 14:45:40.987 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:40.987 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:41.003 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNASEQ:RNASEQ:DESEQ2_QC_STAR_SALMON
+Nov-26 14:45:41.005 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:DESEQ2_QC_STAR_SALMON` matches process NFCORE_RNASEQ:RNASEQ:DESEQ2_QC_STAR_SALMON
+Nov-26 14:45:41.007 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:41.007 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:41.050 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNASEQ:RNASEQ:BAM_MARKDUPLICATES_PICARD:PICARD_MARKDUPLICATES
+Nov-26 14:45:41.051 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:BAM_MARKDUPLICATES_PICARD:PICARD_MARKDUPLICATES` matches process NFCORE_RNASEQ:RNASEQ:BAM_MARKDUPLICATES_PICARD:PICARD_MARKDUPLICATES
+Nov-26 14:45:41.054 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:41.054 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:41.072 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_RNASEQ:RNASEQ:BAM_MARKDUPLICATES_PICARD:SAMTOOLS_INDEX
+Nov-26 14:45:41.074 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:BAM_MARKDUPLICATES_PICARD:SAMTOOLS_INDEX` matches process NFCORE_RNASEQ:RNASEQ:BAM_MARKDUPLICATES_PICARD:SAMTOOLS_INDEX
+Nov-26 14:45:41.076 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:41.076 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:41.099 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_RNASEQ:RNASEQ:BAM_MARKDUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS
+Nov-26 14:45:41.100 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:BAM_MARKDUPLICATES_PICARD:BAM_STATS_SAMTOOLS:.*` matches process NFCORE_RNASEQ:RNASEQ:BAM_MARKDUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS
+Nov-26 14:45:41.102 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:41.102 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:41.113 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_RNASEQ:RNASEQ:BAM_MARKDUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT
+Nov-26 14:45:41.114 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:BAM_MARKDUPLICATES_PICARD:BAM_STATS_SAMTOOLS:.*` matches process NFCORE_RNASEQ:RNASEQ:BAM_MARKDUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT
+Nov-26 14:45:41.116 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:41.116 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:41.125 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_RNASEQ:RNASEQ:BAM_MARKDUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS
+Nov-26 14:45:41.126 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:BAM_MARKDUPLICATES_PICARD:BAM_STATS_SAMTOOLS:.*` matches process NFCORE_RNASEQ:RNASEQ:BAM_MARKDUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS
+Nov-26 14:45:41.127 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:41.128 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:41.153 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNASEQ:RNASEQ:STRINGTIE_STRINGTIE
+Nov-26 14:45:41.154 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:STRINGTIE_STRINGTIE` matches process NFCORE_RNASEQ:RNASEQ:STRINGTIE_STRINGTIE
+Nov-26 14:45:41.156 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:41.156 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:41.177 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNASEQ:RNASEQ:SUBREAD_FEATURECOUNTS
+Nov-26 14:45:41.178 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SUBREAD_FEATURECOUNTS` matches process NFCORE_RNASEQ:RNASEQ:SUBREAD_FEATURECOUNTS
+Nov-26 14:45:41.181 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:41.181 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:41.193 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:MULTIQC_CUSTOM_BIOTYPE` matches process NFCORE_RNASEQ:RNASEQ:MULTIQC_CUSTOM_BIOTYPE
+Nov-26 14:45:41.195 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:41.195 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:41.216 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_RNASEQ:RNASEQ:BEDTOOLS_GENOMECOV_FW
+Nov-26 14:45:41.218 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:BEDTOOLS_GENOMECOV_FW` matches process NFCORE_RNASEQ:RNASEQ:BEDTOOLS_GENOMECOV_FW
+Nov-26 14:45:41.221 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:41.222 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:41.231 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_RNASEQ:RNASEQ:BEDTOOLS_GENOMECOV_REV
+Nov-26 14:45:41.232 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:BEDTOOLS_GENOMECOV_REV` matches process NFCORE_RNASEQ:RNASEQ:BEDTOOLS_GENOMECOV_REV
+Nov-26 14:45:41.236 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:41.236 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:41.252 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNASEQ:RNASEQ:BEDGRAPH_BEDCLIP_BEDGRAPHTOBIGWIG_FORWARD:UCSC_BEDCLIP
+Nov-26 14:45:41.253 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:BEDGRAPH_BEDCLIP_BEDGRAPHTOBIGWIG_FORWARD:UCSC_BEDCLIP` matches process NFCORE_RNASEQ:RNASEQ:BEDGRAPH_BEDCLIP_BEDGRAPHTOBIGWIG_FORWARD:UCSC_BEDCLIP
+Nov-26 14:45:41.255 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:41.255 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:41.268 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_RNASEQ:RNASEQ:BEDGRAPH_BEDCLIP_BEDGRAPHTOBIGWIG_FORWARD:UCSC_BEDGRAPHTOBIGWIG
+Nov-26 14:45:41.269 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:BEDGRAPH_BEDCLIP_BEDGRAPHTOBIGWIG_FORWARD:UCSC_BEDGRAPHTOBIGWIG` matches process NFCORE_RNASEQ:RNASEQ:BEDGRAPH_BEDCLIP_BEDGRAPHTOBIGWIG_FORWARD:UCSC_BEDGRAPHTOBIGWIG
+Nov-26 14:45:41.270 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:41.271 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:41.283 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNASEQ:RNASEQ:BEDGRAPH_BEDCLIP_BEDGRAPHTOBIGWIG_REVERSE:UCSC_BEDCLIP
+Nov-26 14:45:41.284 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:BEDGRAPH_BEDCLIP_BEDGRAPHTOBIGWIG_REVERSE:UCSC_BEDCLIP` matches process NFCORE_RNASEQ:RNASEQ:BEDGRAPH_BEDCLIP_BEDGRAPHTOBIGWIG_REVERSE:UCSC_BEDCLIP
+Nov-26 14:45:41.286 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:41.286 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:41.296 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_RNASEQ:RNASEQ:BEDGRAPH_BEDCLIP_BEDGRAPHTOBIGWIG_REVERSE:UCSC_BEDGRAPHTOBIGWIG
+Nov-26 14:45:41.297 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:BEDGRAPH_BEDCLIP_BEDGRAPHTOBIGWIG_REVERSE:UCSC_BEDGRAPHTOBIGWIG` matches process NFCORE_RNASEQ:RNASEQ:BEDGRAPH_BEDCLIP_BEDGRAPHTOBIGWIG_REVERSE:UCSC_BEDGRAPHTOBIGWIG
+Nov-26 14:45:41.299 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:41.299 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:41.318 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNASEQ:RNASEQ:QUALIMAP_RNASEQ
+Nov-26 14:45:41.319 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:QUALIMAP_RNASEQ` matches process NFCORE_RNASEQ:RNASEQ:QUALIMAP_RNASEQ
+Nov-26 14:45:41.321 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:41.321 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:41.351 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_long` matches labels `process_long` for process with name NFCORE_RNASEQ:RNASEQ:DUPRADAR
+Nov-26 14:45:41.352 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:DUPRADAR` matches process NFCORE_RNASEQ:RNASEQ:DUPRADAR
+Nov-26 14:45:41.356 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:41.356 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:41.380 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNASEQ:RNASEQ:BAM_RSEQC:RSEQC_BAMSTAT
+Nov-26 14:45:41.382 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:BAM_RSEQC:RSEQC_BAMSTAT` matches process NFCORE_RNASEQ:RNASEQ:BAM_RSEQC:RSEQC_BAMSTAT
+Nov-26 14:45:41.383 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:41.383 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:41.402 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNASEQ:RNASEQ:BAM_RSEQC:RSEQC_INNERDISTANCE
+Nov-26 14:45:41.403 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:BAM_RSEQC:RSEQC_INNERDISTANCE` matches process NFCORE_RNASEQ:RNASEQ:BAM_RSEQC:RSEQC_INNERDISTANCE
+Nov-26 14:45:41.405 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:41.406 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:41.422 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNASEQ:RNASEQ:BAM_RSEQC:RSEQC_INFEREXPERIMENT
+Nov-26 14:45:41.423 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:BAM_RSEQC:RSEQC_INFEREXPERIMENT` matches process NFCORE_RNASEQ:RNASEQ:BAM_RSEQC:RSEQC_INFEREXPERIMENT
+Nov-26 14:45:41.425 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:41.425 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:41.446 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNASEQ:RNASEQ:BAM_RSEQC:RSEQC_JUNCTIONANNOTATION
+Nov-26 14:45:41.447 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:BAM_RSEQC:RSEQC_JUNCTIONANNOTATION` matches process NFCORE_RNASEQ:RNASEQ:BAM_RSEQC:RSEQC_JUNCTIONANNOTATION
+Nov-26 14:45:41.449 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:41.449 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:41.478 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNASEQ:RNASEQ:BAM_RSEQC:RSEQC_JUNCTIONSATURATION
+Nov-26 14:45:41.480 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:BAM_RSEQC:RSEQC_JUNCTIONSATURATION` matches process NFCORE_RNASEQ:RNASEQ:BAM_RSEQC:RSEQC_JUNCTIONSATURATION
+Nov-26 14:45:41.483 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:41.483 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:41.501 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNASEQ:RNASEQ:BAM_RSEQC:RSEQC_READDISTRIBUTION
+Nov-26 14:45:41.502 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:BAM_RSEQC:RSEQC_READDISTRIBUTION` matches process NFCORE_RNASEQ:RNASEQ:BAM_RSEQC:RSEQC_READDISTRIBUTION
+Nov-26 14:45:41.505 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:41.505 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:41.520 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNASEQ:RNASEQ:BAM_RSEQC:RSEQC_READDUPLICATION
+Nov-26 14:45:41.521 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:BAM_RSEQC:RSEQC_READDUPLICATION` matches process NFCORE_RNASEQ:RNASEQ:BAM_RSEQC:RSEQC_READDUPLICATION
+Nov-26 14:45:41.523 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:41.523 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:41.668 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_RNASEQ:RNASEQ:MULTIQC
+Nov-26 14:45:41.669 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:MULTIQC` matches process NFCORE_RNASEQ:RNASEQ:MULTIQC
+Nov-26 14:45:41.671 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-26 14:45:41.671 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-26 14:45:41.695 [main] DEBUG nextflow.Session - Config process names validation disabled as requested
+Nov-26 14:45:41.697 [main] DEBUG nextflow.Session - Igniting dataflow network (137)
+Nov-26 14:45:41.700 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:PREPARE_GENOME:GTF_FILTER
+Nov-26 14:45:41.703 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:PREPARE_GENOME:GTF2BED
+Nov-26 14:45:41.704 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:PREPARE_GENOME:MAKE_TRANSCRIPTS_FASTA
+Nov-26 14:45:41.705 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:PREPARE_GENOME:CUSTOM_GETCHROMSIZES
+Nov-26 14:45:41.705 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:PREPARE_GENOME:STAR_GENOMEGENERATE
+Nov-26 14:45:41.708 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:CAT_FASTQ
+Nov-26 14:45:41.709 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC
+Nov-26 14:45:41.709 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE
+Nov-26 14:45:41.710 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:SALMON_INDEX
+Nov-26 14:45:41.710 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE
+Nov-26 14:45:41.710 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:SALMON_QUANT
+Nov-26 14:45:41.710 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:STAR_ALIGN
+Nov-26 14:45:41.710 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_STATS_SAMTOOLS:SAMTOOLS_SORT
+Nov-26 14:45:41.710 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_STATS_SAMTOOLS:SAMTOOLS_INDEX
+Nov-26 14:45:41.710 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS
+Nov-26 14:45:41.712 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT
+Nov-26 14:45:41.714 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_STATS_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS
+Nov-26 14:45:41.714 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SALMON_QUANT
+Nov-26 14:45:41.714 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:CUSTOM_TX2GENE
+Nov-26 14:45:41.714 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:TXIMETA_TXIMPORT
+Nov-26 14:45:41.714 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SE_GENE
+Nov-26 14:45:41.714 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SE_GENE_LENGTH_SCALED
+Nov-26 14:45:41.714 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SE_GENE_SCALED
+Nov-26 14:45:41.714 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SE_TRANSCRIPT
+Nov-26 14:45:41.714 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:DESEQ2_QC_STAR_SALMON
+Nov-26 14:45:41.714 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:BAM_MARKDUPLICATES_PICARD:PICARD_MARKDUPLICATES
+Nov-26 14:45:41.714 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:BAM_MARKDUPLICATES_PICARD:SAMTOOLS_INDEX
+Nov-26 14:45:41.714 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:BAM_MARKDUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS
+Nov-26 14:45:41.714 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:BAM_MARKDUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT
+Nov-26 14:45:41.715 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:BAM_MARKDUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS
+Nov-26 14:45:41.715 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:STRINGTIE_STRINGTIE
+Nov-26 14:45:41.715 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:SUBREAD_FEATURECOUNTS
+Nov-26 14:45:41.715 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:MULTIQC_CUSTOM_BIOTYPE
+Nov-26 14:45:41.715 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:BEDTOOLS_GENOMECOV_FW
+Nov-26 14:45:41.716 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:BEDTOOLS_GENOMECOV_REV
+Nov-26 14:45:41.716 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_BEDCLIP_BEDGRAPHTOBIGWIG_FORWARD:UCSC_BEDCLIP
+Nov-26 14:45:41.716 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_BEDCLIP_BEDGRAPHTOBIGWIG_FORWARD:UCSC_BEDGRAPHTOBIGWIG
+Nov-26 14:45:41.716 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_BEDCLIP_BEDGRAPHTOBIGWIG_REVERSE:UCSC_BEDCLIP
+Nov-26 14:45:41.716 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_BEDCLIP_BEDGRAPHTOBIGWIG_REVERSE:UCSC_BEDGRAPHTOBIGWIG
+Nov-26 14:45:41.717 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:QUALIMAP_RNASEQ
+Nov-26 14:45:41.718 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:DUPRADAR
+Nov-26 14:45:41.718 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:BAM_RSEQC:RSEQC_BAMSTAT
+Nov-26 14:45:41.719 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:BAM_RSEQC:RSEQC_INNERDISTANCE
+Nov-26 14:45:41.719 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:BAM_RSEQC:RSEQC_INFEREXPERIMENT
+Nov-26 14:45:41.719 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:BAM_RSEQC:RSEQC_JUNCTIONANNOTATION
+Nov-26 14:45:41.720 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:BAM_RSEQC:RSEQC_JUNCTIONSATURATION
+Nov-26 14:45:41.720 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:BAM_RSEQC:RSEQC_READDISTRIBUTION
+Nov-26 14:45:41.720 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:BAM_RSEQC:RSEQC_READDUPLICATION
+Nov-26 14:45:41.739 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNASEQ:RNASEQ:MULTIQC
+Nov-26 14:45:41.744 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_700a4742a1f56b73: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/../fastq_fastqc_umitools_trimgalore/main.nf
+  Script_f289bdfe26d7f1cf: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/local/utils_nfcore_rnaseq_pipeline/../../nf-core/fastq_qc_trim_filter_setstrandedness/../fastq_fastqc_umitools_trimgalore/../../../modules/nf-core/fastqc/main.nf
+  Script_4fb9e5798185138e: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/fastq_align_hisat2/main.nf
+  Script_cdbce3e23a8f89e8: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_markduplicates_picard/../bam_stats_samtools/main.nf
+  Script_ba93fd870f3d5e8f: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../modules/nf-core/stringtie/stringtie/main.nf
+  Script_274aad67990f7b6d: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../modules/local/deseq2_qc/main.nf
+  Script_4955288afd8ca61e: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../modules/nf-core/multiqc/main.nf
+  Script_6fbcf8477f9d7d4c: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./subworkflows/local/utils_nfcore_rnaseq_pipeline/../../nf-core/utils_nfcore_pipeline/main.nf
+  Script_a4ac0ea044c720d7: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/local/quantify_rsem/main.nf
+  Script_a20b3fd16306742a: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./subworkflows/local/prepare_genome/../../../modules/nf-core/kallisto/index/main.nf
+  Script_42ae52df0cb2d74d: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./subworkflows/local/prepare_genome/../../../modules/nf-core/sortmerna/main.nf
+  Script_223ca400878df5b0: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./subworkflows/local/prepare_genome/../../../modules/nf-core/untar/main.nf
+  Script_7cae7a5555a00165: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/local/quantify_rsem/../../../modules/nf-core/rsem/calculateexpression/main.nf
+  Script_7bbd1ec48b03ff67: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bedgraph_bedclip_bedgraphtobigwig/main.nf
+  Script_7f08cebaaf4bb74a: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../modules/nf-core/bedtools/genomecov/main.nf
+  Script_cd4906dd24febbaa: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../modules/nf-core/preseq/lcextrap/main.nf
+  Script_d95de3a65f05cb9b: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/quantify_pseudo_alignment/../../../modules/nf-core/kallisto/quant/main.nf
+  Script_a6b84a8d8db37c9d: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./subworkflows/local/prepare_genome/../../../modules/nf-core/gunzip/main.nf
+  Script_0ce72e734ad77725: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/local/utils_nfcore_rnaseq_pipeline/../../nf-core/utils_nextflow_pipeline/main.nf
+  Script_81a2876a059155a7: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./subworkflows/local/prepare_genome/../../../modules/local/gtf_filter/main.nf
+  Script_6012db1a2adb3e63: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/quantify_pseudo_alignment/../../../modules/nf-core/summarizedexperiment/summarizedexperiment/main.nf
+  Script_cc2a9c8ba5b8cc15: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_rseqc/../../../modules/nf-core/rseqc/tin/main.nf
+  Script_de1c7c124fa4c7b4: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/local/quantify_rsem/../../nf-core/bam_sort_stats_samtools/../../../modules/nf-core/samtools/sort/main.nf
+  Script_3fe75c83449750cf: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./subworkflows/local/utils_nfcore_rnaseq_pipeline/../../nf-core/fastq_qc_trim_filter_setstrandedness/../fastq_subsample_fq_salmon/../../../modules/nf-core/salmon/index/main.nf
+  Script_2336832ee440cf47: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/local/utils_nfcore_rnaseq_pipeline/../../nf-core/fastq_qc_trim_filter_setstrandedness/../fastq_fastqc_umitools_fastp/main.nf
+  Script_e10a0e7467f0b3e9: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_markduplicates_picard/../../../modules/nf-core/picard/markduplicates/main.nf
+  Script_9dafebea04962540: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/../../../modules/nf-core/cat/fastq/main.nf
+  Script_d09a57bae36c5a8c: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/local/utils_nfcore_rnaseq_pipeline/../../nf-core/fastq_qc_trim_filter_setstrandedness/../fastq_subsample_fq_salmon/../../../modules/nf-core/salmon/quant/main.nf
+  Script_00f15dacb1370c16: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_rseqc/../../../modules/nf-core/rseqc/junctionannotation/main.nf
+  Script_2882453b74be5692: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../modules/local/multiqc_custom_biotype/main.nf
+  Script_b043057988626cf5: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./subworkflows/local/prepare_genome/../../../modules/local/gtf2bed/main.nf
+  Script_2ef994d5e8cb2cca: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/local/align_star/../../../modules/nf-core/star/align/main.nf
+  Script_5752768576b10575: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bedgraph_bedclip_bedgraphtobigwig/../../../modules/nf-core/ucsc/bedgraphtobigwig/main.nf
+  Script_bf5c4db2e13898ce: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./subworkflows/local/prepare_genome/main.nf
+  Script_b59c576c4446d2c0: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/fastq_qc_trim_filter_setstrandedness/main.nf
+  Script_bfcc6b499d31082a: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./subworkflows/local/utils_nfcore_rnaseq_pipeline/../../nf-core/fastq_qc_trim_filter_setstrandedness/../fastq_fastqc_umitools_trimgalore/../../../modules/nf-core/trimgalore/main.nf
+  Script_8ea3feb9c15d5fda: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./subworkflows/local/utils_nfcore_rnaseq_pipeline/../../nf-core/fastq_qc_trim_filter_setstrandedness/../fastq_subsample_fq_salmon/../../../modules/nf-core/fq/subsample/main.nf
+  Script_54e0c3dce4d8c049: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../modules/nf-core/dupradar/main.nf
+  Script_e83567872dab8752: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./subworkflows/local/utils_nfcore_rnaseq_pipeline/main.nf
+  Script_fe6f9a2d2d32c34f: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_rseqc/../../../modules/nf-core/rseqc/innerdistance/main.nf
+  Script_e927852b807f691d: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_rseqc/../../../modules/nf-core/rseqc/inferexperiment/main.nf
+  Script_0eb0afd192164cce: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/fastq_align_hisat2/../../../modules/nf-core/hisat2/align/main.nf
+  Script_18089a64b4672be8: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_rseqc/main.nf
+  Script_3ff1656b1d66c1f2: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_sort_stats_samtools/../../../modules/nf-core/samtools/index/main.nf
+  Script_bb977b7c9974defb: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../modules/nf-core/subread/featurecounts/main.nf
+  Script_8703d5c7d48af3ab: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./subworkflows/local/prepare_genome/../../../modules/local/star_genomegenerate_igenomes/main.nf
+  Script_8539cabf2246c13c: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./subworkflows/local/utils_nfcore_rnaseq_pipeline/../../nf-core/fastq_qc_trim_filter_setstrandedness/../../../modules/nf-core/bbmap/bbsplit/main.nf
+  Script_59101990e865c327: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_dedup_stats_samtools_umitools/../../../modules/nf-core/umitools/dedup/main.nf
+  Script_cac98b66b2be514e: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/main.nf
+  Script_b4163cee6a6b2681: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/local/utils_nfcore_rnaseq_pipeline/../../nf-core/fastq_qc_trim_filter_setstrandedness/../fastq_fastqc_umitools_trimgalore/../../../modules/nf-core/umitools/extract/main.nf
+  Script_58ab0c288a51eacd: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/local/quantify_rsem/../../../modules/local/rsem_merge_counts/main.nf
+  Script_1adca4cb4e6fb5ea: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_dedup_stats_samtools_umitools/main.nf
+  Script_78bf8b6ebf2410dd: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./subworkflows/local/prepare_genome/../../../modules/nf-core/custom/catadditionalfasta/main.nf
+  Script_bac6d352d496d867: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./subworkflows/local/prepare_genome/../../../modules/nf-core/rsem/preparereference/main.nf
+  Script_cf1e17a1e4a14232: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_rseqc/../../../modules/nf-core/rseqc/bamstat/main.nf
+  Script_b666edf0129ec7fc: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./subworkflows/local/prepare_genome/../../../modules/nf-core/gffread/main.nf
+  Script_0e66b2e62edfe6ee: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../modules/nf-core/bracken/bracken/main.nf
+  Script_89479fc8fff50057: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./subworkflows/local/prepare_genome/../../../modules/local/preprocess_transcripts_fasta_gencode/main.nf
+  Script_f3cf076a526d2485: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_markduplicates_picard/main.nf
+  Script_22e881f90cabfe1d: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./subworkflows/local/prepare_genome/../../../modules/nf-core/custom/getchromsizes/main.nf
+  Script_0996388d892bd19a: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_dedup_stats_samtools_umitools/../bam_stats_samtools/../../../modules/nf-core/samtools/flagstat/main.nf
+  Script_de639b9212d9f01b: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../modules/nf-core/kraken2/kraken2/main.nf
+  Script_f84ac7d7414849ca: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../modules/nf-core/qualimap/rnaseq/main.nf
+  Script_23e9bb1f954772b0: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bedgraph_bedclip_bedgraphtobigwig/../../../modules/nf-core/ucsc/bedclip/main.nf
+  Script_215a636da7ab24a2: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/local/utils_nfcore_rnaseq_pipeline/../../nf-core/utils_nfschema_plugin/main.nf
+  Script_9f6ce129b29ed4a5: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./subworkflows/local/utils_nfcore_rnaseq_pipeline/../../nf-core/fastq_qc_trim_filter_setstrandedness/../fastq_fastqc_umitools_fastp/../../../modules/nf-core/fastp/main.nf
+  Script_65df9a280f8440bc: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/main.nf
+  Script_210bd6478ac003f9: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/local/align_star/../../../modules/local/star_align_igenomes/main.nf
+  Script_1c7d7a4569b86317: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_markduplicates_picard/../bam_stats_samtools/../../../modules/nf-core/samtools/stats/main.nf
+  Script_dbe8fbfa975cebf1: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_rseqc/../../../modules/nf-core/rseqc/junctionsaturation/main.nf
+  Script_4e706ffea9c34ab7: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./subworkflows/local/prepare_genome/../../../modules/nf-core/hisat2/build/main.nf
+  Script_7acb62b9e60b283e: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_rseqc/../../../modules/nf-core/rseqc/readduplication/main.nf
+  Script_1988a0fe7ca53b87: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_markduplicates_picard/../bam_stats_samtools/../../../modules/nf-core/samtools/idxstats/main.nf
+  Script_c3f4bd3b3e600606: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/quantify_pseudo_alignment/main.nf
+  Script_128cb4fde5e21aab: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/quantify_pseudo_alignment/../../../modules/nf-core/custom/tx2gene/main.nf
+  Script_1a18572a60f1dc55: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/local/align_star/main.nf
+  Script_2b72a5be5c8fe209: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/quantify_pseudo_alignment/../../../modules/nf-core/tximeta/tximport/main.nf
+  Script_e76b9210f32f34ec: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../modules/nf-core/umitools/prepareforrsem/main.nf
+  Script_c270664eee17cd81: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./subworkflows/local/prepare_genome/../../../modules/nf-core/hisat2/extractsplicesites/main.nf
+  Script_ed8a2d8877b0f6d8: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./subworkflows/local/prepare_genome/../../../modules/nf-core/star/genomegenerate/main.nf
+  Script_f1f53abfc1403f76: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./subworkflows/local/utils_nfcore_rnaseq_pipeline/../../nf-core/fastq_qc_trim_filter_setstrandedness/../fastq_subsample_fq_salmon/main.nf
+  Script_bd8537eec78d4f82: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/nf-core/bam_rseqc/../../../modules/nf-core/rseqc/readdistribution/main.nf
+  Script_2ebe1d1a775a7432: /home/hieunguyen/CRC1382/src_2023/241121_Laouina_Pabst_MolMedizin_3mRNAseq/rnaseq/./workflows/rnaseq/../../subworkflows/local/align_star/../../nf-core/bam_sort_stats_samtools/main.nf
+Nov-26 14:45:41.745 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Nov-26 14:45:41.745 [main] DEBUG nextflow.Session - Session await
+Nov-26 14:45:41.951 [Actor Thread 24] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 1; slices: 1; internal sort time: 0.001 s; external sort time: 0.035 s; total time: 0.036 s
+Nov-26 14:45:41.951 [Actor Thread 28] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 1; slices: 1; internal sort time: 0.001 s; external sort time: 0.035 s; total time: 0.036 s
+Nov-26 14:45:41.952 [Actor Thread 28] DEBUG nextflow.file.FileCollector - >> temp file exists? false
+Nov-26 14:45:41.952 [Actor Thread 24] DEBUG nextflow.file.FileCollector - >> temp file exists? false
+Nov-26 14:45:41.952 [Actor Thread 28] DEBUG nextflow.file.FileCollector - Missed collect-file cache -- cause: java.nio.file.NoSuchFileException: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/collect-file/6a49bfafe289cd3e4506cb0d70d45cd7
+Nov-26 14:45:41.954 [Actor Thread 24] DEBUG nextflow.file.FileCollector - Missed collect-file cache -- cause: java.nio.file.NoSuchFileException: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/collect-file/16c223a36f207c369a07fd165deb2a9d
+Nov-26 14:45:41.960 [Actor Thread 28] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/collect-file/6a49bfafe289cd3e4506cb0d70d45cd7
+Nov-26 14:45:41.967 [Actor Thread 24] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/collect-file/16c223a36f207c369a07fd165deb2a9d
+Nov-26 14:45:41.970 [Actor Thread 28] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-11447701342281711373
+Nov-26 14:45:41.970 [Actor Thread 24] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-948486894932288924
+Nov-26 14:45:41.993 [Actor Thread 3] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 48; slices: 1; internal sort time: 0.037 s; external sort time: 0.003 s; total time: 0.04 s
+Nov-26 14:45:41.994 [Actor Thread 3] DEBUG nextflow.file.FileCollector - >> temp file exists? false
+Nov-26 14:45:41.994 [Actor Thread 3] DEBUG nextflow.file.FileCollector - Missed collect-file cache -- cause: java.nio.file.NoSuchFileException: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/collect-file/78e14f809e613ca206473d8aa053bf81
+Nov-26 14:45:42.003 [Actor Thread 3] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/collect-file/78e14f809e613ca206473d8aa053bf81
+Nov-26 14:45:42.005 [Actor Thread 3] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-2828013928708309568
+Nov-26 14:45:42.064 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:45:42.066 [Task submitter] INFO  nextflow.Session - [6f/1a0726] Submitted process > NFCORE_RNASEQ:PREPARE_GENOME:GTF_FILTER (Mus_musculus.GRCm39.dna.primary_assembly.fa)
+Nov-26 14:45:42.078 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:45:42.078 [Task submitter] INFO  nextflow.Session - [a7/91a913] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (D3_GFy_S6)
+Nov-26 14:45:42.084 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:45:42.085 [Task submitter] INFO  nextflow.Session - [13/bdbe92] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D3_WT_young_S18)
+Nov-26 14:45:42.095 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:45:42.096 [Task submitter] INFO  nextflow.Session - [5d/2b53cb] Submitted process > NFCORE_RNASEQ:PREPARE_GENOME:CUSTOM_GETCHROMSIZES (Mus_musculus.GRCm39.dna.primary_assembly.fa)
+Nov-26 14:45:53.163 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: NFCORE_RNASEQ:PREPARE_GENOME:CUSTOM_GETCHROMSIZES (Mus_musculus.GRCm39.dna.primary_assembly.fa); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/5d/2b53cb616742b4a447873b1abb1e2d]
+Nov-26 14:45:53.164 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=84; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Nov-26 14:45:53.322 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNASEQ:PREPARE_GENOME:CUSTOM_GETCHROMSIZES > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Nov-26 14:45:56.948 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: NFCORE_RNASEQ:PREPARE_GENOME:GTF_FILTER (Mus_musculus.GRCm39.dna.primary_assembly.fa); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/6f/1a07266c4c635b121b38a28e126349]
+Nov-26 14:45:57.967 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:45:57.968 [Task submitter] INFO  nextflow.Session - [57/ff2b93] Submitted process > NFCORE_RNASEQ:PREPARE_GENOME:GTF2BED (Mus_musculus.GRCm39.dna.primary_assembly.filtered.gtf)
+Nov-26 14:46:23.185 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 51; name: NFCORE_RNASEQ:PREPARE_GENOME:GTF2BED (Mus_musculus.GRCm39.dna.primary_assembly.filtered.gtf); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/57/ff2b93af53dc5d92485dc2075ae023]
+Nov-26 14:46:36.349 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 40; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (D3_GFy_S6); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/a7/91a913f9d06ac5d108269c070ba427]
+Nov-26 14:46:36.355 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:46:36.355 [Task submitter] INFO  nextflow.Session - [bb/fa13ce] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (P1_IEC_WT_old_S7)
+Nov-26 14:46:36.373 [TaskFinalizer-4] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=84; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Nov-26 14:46:51.522 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 46; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D3_WT_young_S18); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/13/bdbe92de0b0b8ecb8b49bba7efaf73]
+Nov-26 14:46:51.533 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:46:51.534 [Task submitter] INFO  nextflow.Session - [03/27f6b7] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (D1_WT_young_S16)
+Nov-26 14:46:51.536 [TaskFinalizer-5] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Nov-26 14:46:51.545 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:46:51.546 [Task submitter] INFO  nextflow.Session - [12/15c365] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (D2_GFy_S5)
+Nov-26 14:46:51.558 [Actor Thread 53] DEBUG nextflow.Nextflow - FQ/SUBSAMPLE found 1 FASTQ files
+Nov-26 14:46:52.553 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:46:52.554 [Task submitter] INFO  nextflow.Session - [5d/690183] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (D3_WT_young_S18)
+Nov-26 14:47:08.584 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (P1_IEC_WT_old_S7); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/bb/fa13ce7f7a0f2fffb2a455974623be]
+Nov-26 14:47:08.592 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:47:08.592 [Task submitter] INFO  nextflow.Session - [a3/c30108] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (P3_GFy_S3)
+Nov-26 14:47:19.081 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 54; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (D3_WT_young_S18); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/5d/690183f36c22f8edbf073fe5a6cbd2]
+Nov-26 14:47:22.823 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 24; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (D2_GFy_S5); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/12/15c3650e664f8a30dfe9fd4ee1b4a8]
+Nov-26 14:47:22.831 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:47:22.831 [Task submitter] INFO  nextflow.Session - [92/31d64b] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (P3_IEC_WT_old_S9)
+Nov-26 14:47:27.785 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 18; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (D1_WT_young_S16); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/03/27f6b759f29ee1782f7e824b787ad2]
+Nov-26 14:47:27.792 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:47:27.793 [Task submitter] INFO  nextflow.Session - [39/793363] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (P1_GFy_S1)
+Nov-26 14:47:39.789 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 43; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (P3_GFy_S3); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/a3/c30108f7059478bf181fcce8f7755e]
+Nov-26 14:47:39.796 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:47:39.797 [Task submitter] INFO  nextflow.Session - [48/755519] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (P1_GF_old_S19)
+Nov-26 14:47:51.085 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 47; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (P3_IEC_WT_old_S9); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/92/31d64b904136cd88aa88e3245df26c]
+Nov-26 14:47:51.094 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:47:51.095 [Task submitter] INFO  nextflow.Session - [5e/30b0c0] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (P2_IEC_WT_old_S8)
+Nov-26 14:48:03.991 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (P1_GFy_S1); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/39/7933632c64dcce53219fafc082f085]
+Nov-26 14:48:03.999 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:48:03.999 [Task submitter] INFO  nextflow.Session - [29/58c645] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (D2_IEC_WT_old_S11)
+Nov-26 14:48:16.914 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (P1_GF_old_S19); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/48/7555195f42d642850083399e32977e]
+Nov-26 14:48:16.918 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:48:16.918 [Task submitter] INFO  nextflow.Session - [48/c96791] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (P2_GF_old_S20)
+Nov-26 14:48:25.232 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 28; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (P2_IEC_WT_old_S8); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/5e/30b0c02666f2a75187bb82358584ab]
+Nov-26 14:48:25.240 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:48:25.241 [Task submitter] INFO  nextflow.Session - [98/6ab313] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (D1_GF_old_S22)
+Nov-26 14:48:26.184 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 27; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (D2_IEC_WT_old_S11); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/29/58c645a3f2f5c174834cdcf0b3544f]
+Nov-26 14:48:26.191 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:48:26.192 [Task submitter] INFO  nextflow.Session - [7c/59980d] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (D3_GF_old_S24)
+Nov-26 14:48:51.085 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 22; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (P2_GF_old_S20); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/48/c96791456ebf82a2c6c85080b2e278]
+Nov-26 14:48:51.092 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:48:51.092 [Task submitter] INFO  nextflow.Session - [71/51d7f7] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (P2_GFy_S2)
+Nov-26 14:49:00.352 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (D1_GF_old_S22); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/98/6ab31352b2d31290941fbcd4fb0d33]
+Nov-26 14:49:00.360 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:49:00.360 [Task submitter] INFO  nextflow.Session - [ec/33742a] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (D3_IEC_WT_old_S12)
+Nov-26 14:49:03.384 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 34; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (D3_GF_old_S24); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/7c/59980d5e5ad3c4299f60c6013f40ea]
+Nov-26 14:49:03.391 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:49:03.393 [Task submitter] INFO  nextflow.Session - [04/f4a28e] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (P3_WT_young_S15)
+Nov-26 14:49:29.470 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 45; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (D3_IEC_WT_old_S12); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/ec/33742a1a964f36254184b4ec545cd8]
+Nov-26 14:49:29.477 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:49:29.478 [Task submitter] INFO  nextflow.Session - [99/4e2ab6] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (P1_WT_young_S13)
+Nov-26 14:49:32.316 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 25; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (P2_GFy_S2); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/71/51d7f768e9be90f609747eb2ee05c2]
+Nov-26 14:49:32.325 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:49:32.326 [Task submitter] INFO  nextflow.Session - [d1/766b7f] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (D3_WT_young_S18)
+Nov-26 14:49:39.612 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 50; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (P3_WT_young_S15); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/04/f4a28e9f8d8ae3f5722592dfcbde4a]
+Nov-26 14:49:39.620 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:49:39.620 [Task submitter] INFO  nextflow.Session - [cd/21608c] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (P3_GF_old_S21)
+Nov-26 14:50:01.633 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 19; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (P1_WT_young_S13); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/99/4e2ab67b436f2c5aaf9349bf4311b3]
+Nov-26 14:50:01.640 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:50:01.643 [Task submitter] INFO  nextflow.Session - [16/7295b3] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (D1_IEC_WT_old_S10)
+Nov-26 14:50:05.590 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 49; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (D3_WT_young_S18); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/d1/766b7fe15a857f635ea8a5892dfeb5]
+Nov-26 14:50:05.598 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:50:05.598 [Task submitter] INFO  nextflow.Session - [4c/260299] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (D2_WT_young_S17)
+Nov-26 14:50:14.803 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 37; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (P3_GF_old_S21); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/cd/21608c90276568a06dad9327649619]
+Nov-26 14:50:14.811 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:50:14.812 [Task submitter] INFO  nextflow.Session - [16/c1fc4d] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (D1_GFy_S4)
+Nov-26 14:50:35.783 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (D1_IEC_WT_old_S10); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/16/7295b377cecd3b5da7019860607721]
+Nov-26 14:50:35.787 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:50:35.788 [Task submitter] INFO  nextflow.Session - [9a/2158ca] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (P2_WT_young_S14)
+Nov-26 14:50:37.741 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 30; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (D2_WT_young_S17); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/4c/2602994c8660f5fdc8623a30a3cd16]
+Nov-26 14:50:37.748 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:50:37.748 [Task submitter] INFO  nextflow.Session - [c7/06f62b] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (D2_GF_old_S23)
+Nov-26 14:50:40.345 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 8; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (D1_GFy_S4); status: RUNNING; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/16/c1fc4d57f3c40c209ba281b4786c95]
+~> TaskHandler[id: 33; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (P2_WT_young_S14); status: RUNNING; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/9a/2158cab4c0f071caf671f4791cc12c]
+~> TaskHandler[id: 20; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (D2_GF_old_S23); status: RUNNING; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/c7/06f62b7778b14eac8ef865ad77709a]
+Nov-26 14:50:42.754 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 25 -- tasks to be submitted are shown below
+~> TaskHandler[id: 3; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D1_GF_old_S22); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/1a/1a1f63651c48bdc74e2c765ccc1ca4]
+~> TaskHandler[id: 39; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D3_GFy_S6); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/22/ad22e89558b8894c2bfdc6d4d74263]
+~> TaskHandler[id: 14; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D1_WT_young_S16); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/86/d94e1e8982b12b169268a45a564e18]
+~> TaskHandler[id: 21; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P2_GF_old_S20); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/66/cfe51e9cf0cd7a5362ba629b33b8fa]
+~> TaskHandler[id: 29; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D2_IEC_WT_old_S11); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/d8/b5b85be187cd6e2bce4eab81cb518a]
+~> TaskHandler[id: 5; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P1_GF_old_S19); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/cf/33063aec14d8a4a0255d6e1447d057]
+~> TaskHandler[id: 9; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P1_GFy_S1); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/c0/af9fb667e6a9384c804c46d701b936]
+~> TaskHandler[id: 41; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P3_GFy_S3); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/7b/5e2fe350aa7c49774a7ef97a5d5c08]
+~> TaskHandler[id: 13; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P1_IEC_WT_old_S7); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/50/32088cd97994d22eba6abc7e84321a]
+~> TaskHandler[id: 35; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P2_WT_young_S14); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/fe/fec466963346c7e8c9b58064e53c7e]
+.. remaining tasks omitted.
+Nov-26 14:50:48.118 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (D1_GFy_S4); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/16/c1fc4d57f3c40c209ba281b4786c95]
+Nov-26 14:51:11.975 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 20; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (D2_GF_old_S23); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/c7/06f62b7778b14eac8ef865ad77709a]
+Nov-26 14:51:11.984 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:51:11.985 [Task submitter] INFO  nextflow.Session - [1a/1a1f63] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D1_GF_old_S22)
+Nov-26 14:51:12.926 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 33; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:FASTQC (P2_WT_young_S14); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/9a/2158cab4c0f071caf671f4791cc12c]
+Nov-26 14:52:03.546 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D1_GF_old_S22); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/1a/1a1f63651c48bdc74e2c765ccc1ca4]
+Nov-26 14:52:03.553 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:52:03.554 [Task submitter] INFO  nextflow.Session - [22/ad22e8] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D3_GFy_S6)
+Nov-26 14:52:03.555 [TaskFinalizer-10] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Nov-26 14:52:03.563 [Actor Thread 39] DEBUG nextflow.Nextflow - FQ/SUBSAMPLE found 1 FASTQ files
+Nov-26 14:52:04.563 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:52:04.564 [Task submitter] INFO  nextflow.Session - [f2/6de6d1] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (D1_GF_old_S22)
+Nov-26 14:52:30.104 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 55; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (D1_GF_old_S22); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/f2/6de6d17a398281864462838639168d]
+Nov-26 14:52:55.287 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 39; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D3_GFy_S6); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/22/ad22e89558b8894c2bfdc6d4d74263]
+Nov-26 14:52:55.294 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:52:55.295 [Task submitter] INFO  nextflow.Session - [86/d94e1e] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D1_WT_young_S16)
+Nov-26 14:52:55.296 [TaskFinalizer-2] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Nov-26 14:52:55.304 [Actor Thread 14] DEBUG nextflow.Nextflow - FQ/SUBSAMPLE found 1 FASTQ files
+Nov-26 14:52:56.309 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:52:56.309 [Task submitter] INFO  nextflow.Session - [b5/6f7f57] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (D3_GFy_S6)
+Nov-26 14:53:20.909 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 56; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (D3_GFy_S6); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/b5/6f7f57890fa4e04f149ddb406621c5]
+Nov-26 14:53:45.098 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D1_WT_young_S16); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/86/d94e1e8982b12b169268a45a564e18]
+Nov-26 14:53:45.105 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:53:45.106 [Task submitter] INFO  nextflow.Session - [66/cfe51e] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P2_GF_old_S20)
+Nov-26 14:53:45.107 [TaskFinalizer-4] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Nov-26 14:53:45.114 [Actor Thread 18] DEBUG nextflow.Nextflow - FQ/SUBSAMPLE found 1 FASTQ files
+Nov-26 14:53:46.114 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:53:46.114 [Task submitter] INFO  nextflow.Session - [b6/4ea133] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (D1_WT_young_S16)
+Nov-26 14:54:10.696 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 57; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (D1_WT_young_S16); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/b6/4ea13372752978979985dc63ee581f]
+Nov-26 14:54:35.160 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 21; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P2_GF_old_S20); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/66/cfe51e9cf0cd7a5362ba629b33b8fa]
+Nov-26 14:54:35.167 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:54:35.168 [Task submitter] INFO  nextflow.Session - [d8/b5b85b] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D2_IEC_WT_old_S11)
+Nov-26 14:54:35.170 [TaskFinalizer-6] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Nov-26 14:54:35.177 [Actor Thread 38] DEBUG nextflow.Nextflow - FQ/SUBSAMPLE found 1 FASTQ files
+Nov-26 14:54:36.176 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:54:36.177 [Task submitter] INFO  nextflow.Session - [d3/65aef2] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (P2_GF_old_S20)
+Nov-26 14:55:00.820 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 58; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (P2_GF_old_S20); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/d3/65aef2cce117ae2f31b174f66159bf]
+Nov-26 14:55:06.521 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 29; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D2_IEC_WT_old_S11); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/d8/b5b85be187cd6e2bce4eab81cb518a]
+Nov-26 14:55:06.531 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:55:06.531 [Task submitter] INFO  nextflow.Session - [cf/33063a] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P1_GF_old_S19)
+Nov-26 14:55:06.532 [TaskFinalizer-8] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Nov-26 14:55:06.540 [Actor Thread 18] DEBUG nextflow.Nextflow - FQ/SUBSAMPLE found 1 FASTQ files
+Nov-26 14:55:07.541 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:55:07.541 [Task submitter] INFO  nextflow.Session - [e5/b5de96] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (D2_IEC_WT_old_S11)
+Nov-26 14:55:29.402 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 59; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (D2_IEC_WT_old_S11); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/e5/b5de963cffb30eddd8d234c8f83532]
+Nov-26 14:55:40.422 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P1_GF_old_S19); status: RUNNING; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/cf/33063aec14d8a4a0255d6e1447d057]
+Nov-26 14:55:43.408 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 19 -- tasks to be submitted are shown below
+~> TaskHandler[id: 9; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P1_GFy_S1); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/c0/af9fb667e6a9384c804c46d701b936]
+~> TaskHandler[id: 41; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P3_GFy_S3); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/7b/5e2fe350aa7c49774a7ef97a5d5c08]
+~> TaskHandler[id: 13; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P1_IEC_WT_old_S7); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/50/32088cd97994d22eba6abc7e84321a]
+~> TaskHandler[id: 35; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P2_WT_young_S14); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/fe/fec466963346c7e8c9b58064e53c7e]
+~> TaskHandler[id: 17; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D2_GF_old_S23); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/f7/6ca7617419811d7e61629a367fbbce]
+~> TaskHandler[id: 38; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P3_GF_old_S21); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/5d/4773b4a8eb202bda9b9fac1f7887d6]
+~> TaskHandler[id: 31; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P2_IEC_WT_old_S8); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/19/fa84024af93f02e3d05dd6e2eff86b]
+~> TaskHandler[id: 44; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P3_IEC_WT_old_S9); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/fb/02c5f295a0336c22020a1fa9716779]
+~> TaskHandler[id: 42; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D3_IEC_WT_old_S12); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/dc/aceb1d6e260e060b900cdd2deaabc6]
+~> TaskHandler[id: 36; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D3_GF_old_S24); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/a1/412b2a47ca78e17fc58497c354aace]
+.. remaining tasks omitted.
+Nov-26 14:56:01.015 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P1_GF_old_S19); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/cf/33063aec14d8a4a0255d6e1447d057]
+Nov-26 14:56:01.021 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:56:01.021 [Task submitter] INFO  nextflow.Session - [c0/af9fb6] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P1_GFy_S1)
+Nov-26 14:56:01.022 [TaskFinalizer-10] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Nov-26 14:56:01.029 [Actor Thread 6] DEBUG nextflow.Nextflow - FQ/SUBSAMPLE found 1 FASTQ files
+Nov-26 14:56:02.030 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:56:02.031 [Task submitter] INFO  nextflow.Session - [cc/a915ab] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (P1_GF_old_S19)
+Nov-26 14:56:26.996 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 60; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (P1_GF_old_S19); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/cc/a915abd6233b7358a5674f2929a97b]
+Nov-26 14:56:52.223 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P1_GFy_S1); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/c0/af9fb667e6a9384c804c46d701b936]
+Nov-26 14:56:52.233 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:56:52.234 [Task submitter] INFO  nextflow.Session - [7b/5e2fe3] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P3_GFy_S3)
+Nov-26 14:56:52.237 [TaskFinalizer-2] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Nov-26 14:56:52.242 [Actor Thread 39] DEBUG nextflow.Nextflow - FQ/SUBSAMPLE found 1 FASTQ files
+Nov-26 14:56:53.246 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:56:53.246 [Task submitter] INFO  nextflow.Session - [8c/de5724] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (P1_GFy_S1)
+Nov-26 14:57:17.924 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 61; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (P1_GFy_S1); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/8c/de57247c7c8ffa802a276072ff5be6]
+Nov-26 14:57:37.272 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 41; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P3_GFy_S3); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/7b/5e2fe350aa7c49774a7ef97a5d5c08]
+Nov-26 14:57:37.279 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:57:37.280 [Task submitter] INFO  nextflow.Session - [50/32088c] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P1_IEC_WT_old_S7)
+Nov-26 14:57:37.282 [TaskFinalizer-4] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Nov-26 14:57:37.289 [Actor Thread 6] DEBUG nextflow.Nextflow - FQ/SUBSAMPLE found 1 FASTQ files
+Nov-26 14:57:38.288 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:57:38.289 [Task submitter] INFO  nextflow.Session - [61/004167] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (P3_GFy_S3)
+Nov-26 14:58:02.167 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 62; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (P3_GFy_S3); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/61/004167d142fbaa6965780528ff7d5f]
+Nov-26 14:58:23.875 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P1_IEC_WT_old_S7); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/50/32088cd97994d22eba6abc7e84321a]
+Nov-26 14:58:23.882 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:58:23.883 [Task submitter] INFO  nextflow.Session - [fe/fec466] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P2_WT_young_S14)
+Nov-26 14:58:23.884 [TaskFinalizer-6] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Nov-26 14:58:23.891 [Actor Thread 6] DEBUG nextflow.Nextflow - FQ/SUBSAMPLE found 1 FASTQ files
+Nov-26 14:58:24.890 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:58:24.890 [Task submitter] INFO  nextflow.Session - [a4/879e93] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (P1_IEC_WT_old_S7)
+Nov-26 14:58:49.890 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 63; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (P1_IEC_WT_old_S7); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/a4/879e9352f1d6e4307dfe080eb726c9]
+Nov-26 14:59:20.377 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 35; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P2_WT_young_S14); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/fe/fec466963346c7e8c9b58064e53c7e]
+Nov-26 14:59:20.385 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:59:20.385 [Task submitter] INFO  nextflow.Session - [f7/6ca761] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D2_GF_old_S23)
+Nov-26 14:59:20.388 [TaskFinalizer-8] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Nov-26 14:59:20.394 [Actor Thread 6] DEBUG nextflow.Nextflow - FQ/SUBSAMPLE found 1 FASTQ files
+Nov-26 14:59:21.398 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 14:59:21.398 [Task submitter] INFO  nextflow.Session - [fd/a23806] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (P2_WT_young_S14)
+Nov-26 14:59:47.478 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 64; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (P2_WT_young_S14); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/fd/a23806d67158dc3a250c5087477754]
+Nov-26 15:00:10.838 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 17; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D2_GF_old_S23); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/f7/6ca7617419811d7e61629a367fbbce]
+Nov-26 15:00:10.843 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 15:00:10.844 [Task submitter] INFO  nextflow.Session - [5d/4773b4] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P3_GF_old_S21)
+Nov-26 15:00:10.848 [TaskFinalizer-10] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Nov-26 15:00:10.855 [Actor Thread 38] DEBUG nextflow.Nextflow - FQ/SUBSAMPLE found 1 FASTQ files
+Nov-26 15:00:11.852 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 15:00:11.852 [Task submitter] INFO  nextflow.Session - [8b/90be75] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (D2_GF_old_S23)
+Nov-26 15:00:37.461 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 65; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (D2_GF_old_S23); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/8b/90be7586df0fa75e5f17a5bc55e420]
+Nov-26 15:00:40.465 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 38; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P3_GF_old_S21); status: RUNNING; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/5d/4773b4a8eb202bda9b9fac1f7887d6]
+Nov-26 15:00:43.464 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 13 -- tasks to be submitted are shown below
+~> TaskHandler[id: 31; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P2_IEC_WT_old_S8); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/19/fa84024af93f02e3d05dd6e2eff86b]
+~> TaskHandler[id: 44; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P3_IEC_WT_old_S9); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/fb/02c5f295a0336c22020a1fa9716779]
+~> TaskHandler[id: 42; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D3_IEC_WT_old_S12); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/dc/aceb1d6e260e060b900cdd2deaabc6]
+~> TaskHandler[id: 36; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D3_GF_old_S24); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/a1/412b2a47ca78e17fc58497c354aace]
+~> TaskHandler[id: 23; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D2_GFy_S5); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/2f/3bce423cc9c199d8939f3e3ff4bb41]
+~> TaskHandler[id: 48; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P3_WT_young_S15); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/b5/96aac6fa5e2f66a3f56846ec57d4ce]
+~> TaskHandler[id: 16; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P1_WT_young_S13); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/65/280e57e82e81e58a9122d0f5fca09a]
+~> TaskHandler[id: 26; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P2_GFy_S2); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/94/519a01b9f5bd9e0e6e5bd650b9210a]
+~> TaskHandler[id: 11; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D1_IEC_WT_old_S10); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/08/f55b1ccdb92a6bed939895e068f66f]
+~> TaskHandler[id: 7; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D1_GFy_S4); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/5b/4a4dd61a09a13e43f56bc9b06f3f33]
+.. remaining tasks omitted.
+Nov-26 15:01:01.904 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 38; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P3_GF_old_S21); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/5d/4773b4a8eb202bda9b9fac1f7887d6]
+Nov-26 15:01:01.910 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 15:01:01.911 [Task submitter] INFO  nextflow.Session - [19/fa8402] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P2_IEC_WT_old_S8)
+Nov-26 15:01:01.913 [TaskFinalizer-2] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Nov-26 15:01:01.919 [Actor Thread 38] DEBUG nextflow.Nextflow - FQ/SUBSAMPLE found 1 FASTQ files
+Nov-26 15:01:02.919 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 15:01:02.920 [Task submitter] INFO  nextflow.Session - [37/1e0622] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (P3_GF_old_S21)
+Nov-26 15:01:27.734 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 66; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (P3_GF_old_S21); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/37/1e062257bb96483282a55488309163]
+Nov-26 15:01:52.580 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 31; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P2_IEC_WT_old_S8); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/19/fa84024af93f02e3d05dd6e2eff86b]
+Nov-26 15:01:52.589 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 15:01:52.589 [Task submitter] INFO  nextflow.Session - [fb/02c5f2] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P3_IEC_WT_old_S9)
+Nov-26 15:01:52.593 [TaskFinalizer-4] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Nov-26 15:01:52.599 [Actor Thread 40] DEBUG nextflow.Nextflow - FQ/SUBSAMPLE found 1 FASTQ files
+Nov-26 15:01:53.595 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 15:01:53.595 [Task submitter] INFO  nextflow.Session - [c5/f49ff4] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (P2_IEC_WT_old_S8)
+Nov-26 15:02:18.552 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 67; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (P2_IEC_WT_old_S8); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/c5/f49ff4ce49ca569ef7653b2c320bb8]
+Nov-26 15:02:37.471 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 44; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P3_IEC_WT_old_S9); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/fb/02c5f295a0336c22020a1fa9716779]
+Nov-26 15:02:37.478 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 15:02:37.478 [Task submitter] INFO  nextflow.Session - [dc/aceb1d] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D3_IEC_WT_old_S12)
+Nov-26 15:02:37.482 [TaskFinalizer-6] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Nov-26 15:02:37.488 [Actor Thread 38] DEBUG nextflow.Nextflow - FQ/SUBSAMPLE found 1 FASTQ files
+Nov-26 15:02:38.487 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 15:02:38.487 [Task submitter] INFO  nextflow.Session - [9f/dfcce4] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (P3_IEC_WT_old_S9)
+Nov-26 15:03:01.822 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 68; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (P3_IEC_WT_old_S9); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/9f/dfcce4443d05d44c339235879e080b]
+Nov-26 15:03:24.442 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 42; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D3_IEC_WT_old_S12); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/dc/aceb1d6e260e060b900cdd2deaabc6]
+Nov-26 15:03:24.450 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 15:03:24.450 [Task submitter] INFO  nextflow.Session - [a1/412b2a] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D3_GF_old_S24)
+Nov-26 15:03:24.450 [TaskFinalizer-8] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Nov-26 15:03:24.460 [Actor Thread 6] DEBUG nextflow.Nextflow - FQ/SUBSAMPLE found 1 FASTQ files
+Nov-26 15:03:25.458 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 15:03:25.459 [Task submitter] INFO  nextflow.Session - [8d/3a979c] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (D3_IEC_WT_old_S12)
+Nov-26 15:03:49.439 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 69; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (D3_IEC_WT_old_S12); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/8d/3a979c43b61a527d42e9acc8a61b02]
+Nov-26 15:04:17.727 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 36; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D3_GF_old_S24); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/a1/412b2a47ca78e17fc58497c354aace]
+Nov-26 15:04:17.734 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 15:04:17.735 [Task submitter] INFO  nextflow.Session - [2f/3bce42] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D2_GFy_S5)
+Nov-26 15:04:17.737 [TaskFinalizer-10] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Nov-26 15:04:17.744 [Actor Thread 39] DEBUG nextflow.Nextflow - FQ/SUBSAMPLE found 1 FASTQ files
+Nov-26 15:04:18.743 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 15:04:18.743 [Task submitter] INFO  nextflow.Session - [df/f3b337] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (D3_GF_old_S24)
+Nov-26 15:04:44.314 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 70; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (D3_GF_old_S24); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/df/f3b337da17ac042c6f62e352608e51]
+Nov-26 15:05:06.486 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 23; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D2_GFy_S5); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/2f/3bce423cc9c199d8939f3e3ff4bb41]
+Nov-26 15:05:06.493 [TaskFinalizer-2] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Nov-26 15:05:06.493 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 15:05:06.493 [Task submitter] INFO  nextflow.Session - [b5/96aac6] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P3_WT_young_S15)
+Nov-26 15:05:06.498 [Actor Thread 43] DEBUG nextflow.Nextflow - FQ/SUBSAMPLE found 1 FASTQ files
+Nov-26 15:05:07.501 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 15:05:07.501 [Task submitter] INFO  nextflow.Session - [a2/640ed4] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (D2_GFy_S5)
+Nov-26 15:05:31.597 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 71; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (D2_GFy_S5); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/a2/640ed4891391a14abdfad88c0f55e9]
+Nov-26 15:05:40.514 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 48; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P3_WT_young_S15); status: RUNNING; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/b5/96aac6fa5e2f66a3f56846ec57d4ce]
+Nov-26 15:05:43.601 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 7 -- tasks to be submitted are shown below
+~> TaskHandler[id: 16; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P1_WT_young_S13); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/65/280e57e82e81e58a9122d0f5fca09a]
+~> TaskHandler[id: 26; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P2_GFy_S2); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/94/519a01b9f5bd9e0e6e5bd650b9210a]
+~> TaskHandler[id: 11; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D1_IEC_WT_old_S10); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/08/f55b1ccdb92a6bed939895e068f66f]
+~> TaskHandler[id: 7; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D1_GFy_S4); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/5b/4a4dd61a09a13e43f56bc9b06f3f33]
+~> TaskHandler[id: 32; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (D2_WT_young_S17); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/23/8c0d31874cc2673d04c72cc52e9e3d]
+~> TaskHandler[id: 52; name: NFCORE_RNASEQ:PREPARE_GENOME:MAKE_TRANSCRIPTS_FASTA (rsem/Mus_musculus.GRCm39.dna.primary_assembly.fa); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/42/be591047d2185c69bc7feb67cc23d4]
+~> TaskHandler[id: 53; name: NFCORE_RNASEQ:PREPARE_GENOME:STAR_GENOMEGENERATE (Mus_musculus.GRCm39.dna.primary_assembly.fa); status: NEW; exit: -; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/95/f03981c792d28316c284126cf15975]
+Nov-26 15:05:56.578 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 48; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P3_WT_young_S15); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/b5/96aac6fa5e2f66a3f56846ec57d4ce]
+Nov-26 15:05:56.584 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 15:05:56.585 [Task submitter] INFO  nextflow.Session - [65/280e57] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P1_WT_young_S13)
+Nov-26 15:05:56.587 [TaskFinalizer-4] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Nov-26 15:05:56.594 [Actor Thread 39] DEBUG nextflow.Nextflow - FQ/SUBSAMPLE found 1 FASTQ files
+Nov-26 15:05:57.593 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 15:05:57.594 [Task submitter] INFO  nextflow.Session - [03/5ed961] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (P3_WT_young_S15)
+Nov-26 15:06:22.459 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 72; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (P3_WT_young_S15); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/03/5ed961a5e760a97b1bfa60f237038a]
+Nov-26 15:06:42.071 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 16; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P1_WT_young_S13); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/65/280e57e82e81e58a9122d0f5fca09a]
+Nov-26 15:06:42.077 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 15:06:42.078 [Task submitter] INFO  nextflow.Session - [94/519a01] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (P2_GFy_S2)
+Nov-26 15:06:42.079 [TaskFinalizer-6] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Nov-26 15:06:42.087 [Actor Thread 38] DEBUG nextflow.Nextflow - FQ/SUBSAMPLE found 1 FASTQ files
+Nov-26 15:06:43.088 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-26 15:06:43.089 [Task submitter] INFO  nextflow.Session - [66/3d7311] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (P1_WT_young_S13)
+Nov-26 15:07:07.641 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 73; name: NFCORE_RNASEQ:RNASEQ:FASTQ_QC_TRIM_FILTER_SETSTRANDEDNESS:FASTQ_SUBSAMPLE_FQ_SALMON:FQ_SUBSAMPLE (P1_WT_young_S13); status: COMPLETED; exit: 0; error: -; workDir: /home/hieunguyen/CRC1382/outdir/41121_Laouina_Pabst_MolMedizin_3mRNAseq/work/66/3d731154ae12348b3f758c83e944af]
